@@ -7,12 +7,11 @@ import java.util.concurrent.TimeUnit;
 
 public class GroupCreationTests extends TestBase {
 
-
     @Test
     public void testGroupCreation() throws InterruptedException {
         goToGroupsPage();
         initContactCreation();
-        fillGroupForm("Test", "Test2", "Test3");
+        fillGroupForm(faker.name().firstName(), faker.harryPotter().character(), faker.gameOfThrones().dragon());
         returnToHomePage();
         Thread.sleep(3000);
     }

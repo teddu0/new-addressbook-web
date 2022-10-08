@@ -1,3 +1,4 @@
+import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,8 +9,11 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
+
+
 public class TestBase {
     public WebDriver driver;
+    Faker faker;
 
     @BeforeMethod
     public void setUp() {
@@ -18,6 +22,7 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        faker = new Faker();
         driver.get("http://localhost/addressbook/index.php");
         driver.findElement(By.name("user")).sendKeys("admin");
         driver.findElement(By.name("pass")).sendKeys("secret");
