@@ -1,3 +1,5 @@
+package tests;
+
 import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -24,15 +26,23 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         faker = new Faker();
         driver.get("http://localhost/addressbook/index.php");
-        driver.findElement(By.name("user")).sendKeys("admin");
-        driver.findElement(By.name("pass")).sendKeys("secret");
-        driver.findElement(By.xpath("//input[@type = 'submit']")).click();
+        login();
     }
 
     @AfterMethod
     public void tearDown(){
         driver.close();
         driver.quit();
+    }
+
+    public void login(){
+        driver.findElement(By.name("user")).click();
+        driver.findElement(By.name("user")).clear();
+        driver.findElement(By.name("user")).sendKeys("admin");
+        driver.findElement(By.name("pass")).click();
+        driver.findElement(By.name("pass")).clear();
+        driver.findElement(By.name("pass")).sendKeys("secret");
+        driver.findElement(By.xpath("//input[@type = 'submit']")).click();
     }
 
     public void goToGroupsPage(){
@@ -48,8 +58,14 @@ public class TestBase {
     }
 
     public void fillGroupForm(String name, String header, String footer) {
+        driver.findElement(By.name("group_name")).click();
+        driver.findElement(By.name("group_name")).clear();
         driver.findElement(By.name("group_name")).sendKeys(name);
+        driver.findElement(By.name("group_header")).click();
+        driver.findElement(By.name("group_header")).clear();
         driver.findElement(By.name("group_header")).sendKeys(header);
+        driver.findElement(By.name("group_footer")).click();
+        driver.findElement(By.name("group_footer")).clear();
         driver.findElement(By.name("group_footer")).sendKeys(footer);
         driver.findElement(By.name("submit")).click();
     }
