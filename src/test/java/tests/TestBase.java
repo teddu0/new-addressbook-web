@@ -72,4 +72,12 @@ public class TestBase {
     public void submitGroupCreation(){
         driver.findElement(By.name("submit")).click();
     }
+
+    public void selectGroup() {
+        driver.findElement(By.xpath("//input[@name='selected[]']")).click();
+    }
+
+    public void deleteSelectedGroups() {
+        driver.findElement(By.xpath("//input[@name='delete']")).click();
+    }
 }
