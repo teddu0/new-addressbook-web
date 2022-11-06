@@ -1,16 +1,17 @@
 package tests;
 
+import model.GroupData;
 import org.testng.annotations.Test;
 
 public class GroupCreationTests extends TestBase {
 
     @Test
     public void testGroupCreation() throws InterruptedException {
-        goToGroupsPage();
-        initGroupCreation();
-        fillGroupForm(new GroupData("test 1", "test 2", "test 3"));
-        submitGroupCreation();
-        returnToGroupPage();
+        app.goToGroupsPage();
+        app.initGroupCreation();
+        app.fillGroupForm(new GroupData("test 1", "test 2", "test 3"));
+        app.submitGroupCreation();
+        app.returnToGroupPage();
         Thread.sleep(3000);
     }
 
