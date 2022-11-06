@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-06T11:00:04" hostname="MacBook-Air-Aleksandra.local" time="3.21">
+<testsuite name="tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-06T20:16:34" hostname="MacBook-Air-Aleksandra.local" time="3.217">
   <properties/>
-  <testcase name="testGroupDeletion" classname="tests.GroupDeletionTests" time="3.21"/>
+  <testcase name="testGroupDeletion" classname="tests.GroupDeletionTests" time="3.217"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 57987
+  <system-err><![CDATA[Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 53531
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Nov 06, 2022 2:00:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Nov 06, 2022 11:16:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Nov 06, 2022 2:00:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 06, 2022 11:16:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 107, so returning the closest version found: 106
-Nov 06, 2022 2:00:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 06, 2022 11:16:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 107 of 106
 ]]></system-err>
 </testsuite>
